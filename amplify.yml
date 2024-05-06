@@ -3,8 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - sudo yum install jq -y
-        - NPM_TOKEN=$(echo $secrets | jq -r -j '.NPM_TOKEN')
+        - NPM_TOKEN=$(./extract_secrets.js)
         - echo "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}" > .npmrc
         - cat .npmrc
         - npm ci --cache .npm --prefer-offline
