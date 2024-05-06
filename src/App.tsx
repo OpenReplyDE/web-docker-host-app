@@ -10,7 +10,7 @@ function App() {
           <img src="/reply.png" className="logo" alt="Vite logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Web Docker Show Case</h1>
       <div className="card">
         <page-module />
         {showObservedModule && <observed-module />}
