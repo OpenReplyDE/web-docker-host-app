@@ -11,12 +11,14 @@ function App() {
         </a>
       </div>
       <h1>Web Docker Show Case</h1>
-      <div className="card">
+      <div className={"page-module-card"}>
         <page-module />
+      </div>
+      <div className={"observed-module-card"}>
         {showObservedModule && <observed-module />}
       </div>
       <button onClick={() => setShowObservedModule((value) => !value)}>
-        Click me
+        {showObservedModule ? "Hide Observed Module" : "Show Observed Module"}
       </button>
       <p>
         to show or hide the observed module. The observed module is fetched with
