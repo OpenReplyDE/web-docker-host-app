@@ -3,7 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - NPM_TOKEN=$(./extract_secrets.js)
+        - export NPM_TOKEN=$(aws ssm get-parameter --name "/amplify/shared/d3pr0yf1396mq9/NPM_TOKEN" --with-decryption --query "Parameter.Value" --output text)
         - echo "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}" > .npmrc
         - cat .npmrc
         - npm ci --cache .npm --prefer-offline
