@@ -3,6 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - sudo install jq
         - NPM_TOKEN=$(echo $secrets | jq -r -j '.NPM_TOKEN')
         - echo $NPM_TOKEN
         - echo "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}" > .npmrc
