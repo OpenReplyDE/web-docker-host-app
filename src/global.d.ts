@@ -5,6 +5,7 @@ declare global{
     interface IntrinsicElements {
       "page-module": HTMLAttributes<unknown>;
       "observed-module": HTMLAttributes<unknown>;
+      "page-module-share-vue": HTMLAttributes<unknown>;
     }
   }
 }

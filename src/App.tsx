@@ -24,6 +24,8 @@ function App() {
         to show or hide the observed module. The observed module is fetched with
         the first click and cached for the next ones.
       </p>
+
+      <page-module-share-vue />
     </>
   );
 }
