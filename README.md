@@ -12,3 +12,5 @@ The app uses four modules from web docker registry:
     This module is loaded only if a particular selector is present in the host app.
 - [page-module](https://github.com/OpenReplyDE/web-docker-page-module)
     This module is loaded at start up.
+
+The app is built on AWS and can it can be accessed [here](https://main.d3pr0yf1396mq9.amplifyapp.com/).
