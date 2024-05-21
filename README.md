@@ -1,30 +1,14 @@
-# React + TypeScript + Vite
+# Webdocker Host app Show case
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple web app that show cases a host app leveraging the webdocker framework.
 
-Currently, two official plugins are available:
+The app uses four modules from web docker registry:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- [global-vue-module](https://github.com/OpenReplyDE/web-docker-global-vue-module)
+    This module provides a global vue instance that can be used by other modules.
+- [page-module-share-vue](https://github.com/OpenReplyDE/web-docker-page-module-share-vue)
+    This module uses the vue instance that is provided by the global vue instance.
+- [observed-module](https://github.com/OpenReplyDE/web-docker-observed-module)
+    This module is loaded only if a particular selector is present in the host app.
+- [page-module](https://github.com/OpenReplyDE/web-docker-page-module)
+    This module is loaded at start up.
